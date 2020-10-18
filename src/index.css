@@ -12,9 +12,6 @@ code {
     monospace;
 }
 
-.App {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-
-  font-size: 30px;
+#root {
+  padding-top: 40px;
 }

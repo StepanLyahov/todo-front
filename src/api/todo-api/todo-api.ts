@@ -1,5 +1,5 @@
 import ky from 'ky'
-import { ProjectDto } from './types'
+import { CreateProjectDto, ProjectDto } from './types'
 
 const request = ky.create({ prefixUrl: '/api/v1/' })
 
@@ -10,6 +10,16 @@ const getAllProjects = async (): Promise<ProjectDto[]> => {
   return projects
 }
 
+const createProject = async (project: CreateProjectDto): Promise<void> => {
+  await request.post('project/createProject', { json: project })
+}
+
+const createTask = async (task: CreateProjectDto): Promise<void> => {
+  await request.post('task/createTask', { json: task })
+}
+
 export const todoApi = {
   getAllProjects,
+  createProject,
+  createTask,
 }

@@ -1,0 +1,19 @@
+.list {
+  background-color: #fafafa;
+  padding: 0 10px;
+}
+
+.list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project {
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.selected {
+  cursor: auto;
+  font-weight: bold;
+}

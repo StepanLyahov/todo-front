@@ -20,3 +20,14 @@ export type ProjectDto = {
   title: string
   taskDtos: TaskDto[]
 }
+
+export type CreateProjectDto = {
+  title: string
+}
+
+export type CreateTaskDto = {
+  projectId: ProjectId
+  title: string
+  description: string
+  status: TaskStatus
+}
